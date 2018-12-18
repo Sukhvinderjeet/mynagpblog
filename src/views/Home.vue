@@ -32,8 +32,7 @@
           class="btn btn-outline-info btn-sm ripple-parent"
           exact
           :to="{ name: 'article-edit' }"
-        >Create New Article</router-link>
-        
+        >Create New Article</router-link>        
       </div>
     </row>
     <hr class="my-5">
