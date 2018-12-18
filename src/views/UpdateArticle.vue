@@ -115,10 +115,10 @@ import {
   FETCH_COMMENTS,
   ARTICLE_DELETE
 } from "../common/constants";
-import { Btn, mdbInput, MdTextarea, Badge } from "mdbvue";
+import { Btn, Badge } from "mdbvue";
 export default {
   name: "UpdateArticle",
-  components: { RwvListErrors, Btn, mdbInput, MdTextarea, Badge, Comment },
+  components: { RwvListErrors, Btn, Badge, Comment },
   props: {
     previousArticle: {
       type: Object,
@@ -179,9 +179,8 @@ export default {
             params: { slug: data.article.slug }
           });
         })
-        .catch(({ response }) => {
-          this.inProgress = false;
-          this.errors = response.data.errors;
+        .catch(() => {
+          this.inProgress = false; 
         });
     },
     deleteArticle(slug) {

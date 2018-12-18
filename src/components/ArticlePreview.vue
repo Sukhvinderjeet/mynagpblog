@@ -39,22 +39,18 @@
 
 <script>
 import { mapGetters } from "vuex";
-import {
-  ARTICLE_DELETE,
+import { 
   FAVORITE_REMOVE,
   FAVORITE_ADD
 } from "../common/constants";
 
 import {
   Container,
-  Card,
-  CardImg,
+  Card, 
   CardBody,
   CardTitle,
   CardText,
-  Btn,
-  ViewWrapper,
-  MdMask,
+  Btn,  
   CardGroup
 } from "mdbvue";
 
@@ -62,14 +58,11 @@ export default {
   name: "CardPage",
   components: {
     Container,
-    Card,
-    CardImg,
+    Card, 
     CardBody,
     CardTitle,
     CardText,
-    Btn,
-    ViewWrapper,
-    MdMask,
+    Btn,  
     CardGroup
   },
   props: {

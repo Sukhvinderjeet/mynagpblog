@@ -50,11 +50,8 @@
 import { mapGetters } from "vuex";
 import { COMMENT_DESTROY, COMMENT_CREATE } from "../common/constants";
 import {
-  Card,
-  CardImg,
-  CardHeader,
-  CardBody,
-  CardTitle,
+  Card,   
+  CardBody, 
   CardText,
   Btn
 } from "mdbvue";
@@ -62,11 +59,8 @@ import {
 export default {
   name: "Comment",
   components: {
-    Card,
-    CardImg,
-    CardHeader,
-    CardBody,
-    CardTitle,
+    Card,  
+    CardBody, 
     CardText,
     Btn
   },
@@ -95,8 +89,7 @@ export default {
     edit() {
       this.updateComment = true;
     },
-    Update(slug, comment) {
-      debugger;
+    Update(slug, comment) { 
       var payload = { slug: slug, comment: comment.body };
       let action = COMMENT_CREATE;
       let commentId = comment.id;
@@ -104,7 +97,7 @@ export default {
       this.inProgress = true;
       this.$store
         .dispatch(action, payload)
-        .then(({ data }) => {          
+        .then(() => {          
           this.updateComment = false;
           this.inProgress = false;
         })
