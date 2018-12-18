@@ -23,11 +23,11 @@
             {{article.author.username}}
           </div>
           <div class="clear"></div>
-          <btn v-if="!article.favorited" outline="info" size="sm" @click="toggleFavorite">
+          <btn v-if="!article.favorited && isAuthenticated" outline="info" size="sm" @click="toggleFavorite">
             Add to Favourites
             <i class="fa fa-heart pull-right colorred" aria-hidden="true"></i>
           </btn>
-          <btn v-if="article.favorited" outline="warning" size="sm" @click="toggleFavorite">
+          <btn v-if="article.favorited && isAuthenticated" outline="warning" size="sm" @click="toggleFavorite">
             Remove From Favourites
             <i class="fa fa-heart pull-right colorblack" aria-hidden="true"></i>
           </btn>

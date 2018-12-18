@@ -23,7 +23,7 @@
           :to="{ name: 'home' }"
         >Show All Articles</router-link>
 
-        <router-link
+        <router-link v-if="isAuthenticated"
           class="btn btn-outline-info btn-sm ripple-parent"
           exact
           :to="{ name: 'home-favorite' }"
